@@ -1,0 +1,133 @@
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .minimized {
+    max-height: 60px;
+    overflow: hidden;
+  }
+  
+  .expanded {
+    max-height: 500px;
+  }
+  
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-header:hover {
+    background-color: #3e8e41;
+  }
+  
+  .store-name {
+    margin: 0;
+    font-size: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .minimize-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+    padding: 0;
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+  }
+  
+  .message-bubble {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    animation: bounceIn 0.5s ease-out;
+  }
+  
+  .user-message {
+    background-color: #0e19e6;
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .bot-message {
+    background-color: #ddd;
+    color: black;
+    align-self: flex-start;
+  }
+  
+  .input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  .input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .input-area button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .input-area button:hover {
+    background-color: #45a049;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    70% {
+      opacity: 0.7;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
